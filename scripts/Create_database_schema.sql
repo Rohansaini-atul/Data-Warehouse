@@ -1,13 +1,13 @@
 /*
 ==============================================================
-			Checking Database If Exist or not
+			Checking If Database Exists
 ==============================================================
-Here we create check their is no database already name as Data_Warehouse.
-If their are any database, This code will delete the database and create a new.
+Here we check whether a database named Data_Warehouse already exists.
+If the database exists, this script will delete it and create a new one.
 
 **** Warning ****
-This script drop the database name Data_Warehouse and it's data too. So don't directly run
-until you don't want that dasebase.
+This script drops the database named Data_Warehouse and all of its data.
+Do not run this script unless you intend to recreate the database.
 */
 
 
@@ -32,7 +32,6 @@ Go
 USE Data_Warehouse
 GO
 
-
 ----------------BRONZE LEVEL------------------
 
 CREATE SCHEMA Bronze
@@ -44,6 +43,9 @@ CREATE SCHEMA Silver
 Go
 
 ---------------- GOLD LEVEL ------------------
+
+CREATE SCHEMA Gold
+Go
 
 CREATE SCHEMA Gold
 Go
